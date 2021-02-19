@@ -1,5 +1,5 @@
 [package]
-name = "FlashCardsBuilder"
+name = "flash_cards_builder"
 version = "0.1.0"
 authors = ["torre <torreszeaks@gmail.com>"]
 edition = "2018"

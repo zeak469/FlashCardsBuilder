@@ -2,4 +2,4 @@
 Rust console application for building flash cards
 
 # Example
-![](auto_miner_minecraft.gif)
+![](Rust_Flash_Card_Builder_Console_App.gif)

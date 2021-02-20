@@ -66,6 +66,8 @@ fn main() {
     let file_name = String::from(&vec[(user_input - 1) as usize]);
     let file_name_path = String::from(CSV_DIRECTORY) + "\\" + &file_name;
     println!("\nOpening {}...\n", file_name);
+    let mut correct_number = 0.0;
+    let mut incorrect_number = 0.0;
     let mut i = 0;
     let mut answer: String = String::from("");
     if let Ok(lines) = read_lines(file_name_path) {
@@ -103,13 +105,16 @@ fn main() {
                 let mut t = String::new();
                 std::io::stdin().read_line(&mut t).unwrap();
                 if String::from(String::from(t).trim()) == answer.trim(){
+                    correct_number += 1.0;
                     println!("Correct!\n");
                 }
                 else{
-                    println!("Incorrect it is {}\n", answer)
+                    incorrect_number += 1.0;
+                    println!("Incorrect it is{}\n", answer)
                 }
                 i = 0;
             }
         }
     }
+    println!("You got {}%", (correct_number/ (correct_number + incorrect_number) * 100.0));
 }
